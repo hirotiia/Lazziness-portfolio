@@ -11,7 +11,7 @@ import profImage from '../images/hiroya.jpg';
 import './About.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee} from '@fortawesome/free-solid-svg-icons';
 library.add(fab, faCheckSquare, faCoffee);
 
 
@@ -60,15 +60,15 @@ const renderFaIcons = () => {
   const faItemsList = [
     [
     {
-      name: {faCoffee},
+      name: ['fab', 'facebook-square'],
       link: ''
     },
     {
-      name: {faCoffee},
+      name: ['fab', 'github-square'],
       link: ''
     },
     {
-      name: {faCoffee},
+      name: ['fab', 'twitter-square'],
       link: ''
     }
   ]
@@ -80,7 +80,8 @@ const renderFaIcons = () => {
           return(
             <Col className="text-center" key={index}>
               <a href={item.link} target="_blank" >
-                <FontAwesomeIcon icon={item.name.faCoffee} size="5x" />
+                {/* <FontAwesomeIcon icon={item.name.faCoffee} size="5x" /> */}
+                <FontAwesomeIcon icon={item.name} size="5x" />
               </a>
             </Col>
           );
