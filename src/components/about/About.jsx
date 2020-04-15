@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCoffee, faGithub } from '@fortawesome/free-solid-svg-icons';
 import {
     Container,
     Col,
@@ -10,6 +9,10 @@ import {
  import { Image } from 'react-bootstrap';
 import profImage from '../images/hiroya.jpg';
 import './About.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+library.add(fab, faCheckSquare, faCoffee);
 
 
 class About extends React.Component {
@@ -45,6 +48,7 @@ class About extends React.Component {
                     <Col className="text-center">
                     {/* <FontAwesomeIcon icon={faCoffee} /> */}
                     {/* <FontAwesomeIcon icon={faGithub} /> */}
+                    <FontAwesomeIcon icon="check-square" />
                     { renderFaIcons() }
                     </Col>
                 </Row>
