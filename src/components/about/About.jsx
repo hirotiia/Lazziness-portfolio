@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCoffee, faGithub } from '@fortawesome/free-solid-svg-icons';
 import {
     Container,
     Col,
@@ -43,7 +43,8 @@ class About extends React.Component {
                 </Row>
                 <Row className="mb-5">
                     <Col className="text-center">
-                    <FontAwesomeIcon icon={faCoffee} />
+                    {/* <FontAwesomeIcon icon={faCoffee} /> */}
+                    {/* <FontAwesomeIcon icon={faGithub} /> */}
                     { renderFaIcons() }
                     </Col>
                 </Row>
@@ -52,30 +53,30 @@ class About extends React.Component {
     }
 }
 const renderFaIcons = () => {
-  const faIconsList = [
+  const faItemsList = [
     [
     {
-      name: 'fa-accusoft',
+      name: {faCoffee},
       link: ''
     },
     {
-      name: 'twitter-square',
+      name: {faCoffee},
       link: ''
     },
     {
-      name: 'facebook-square',
+      name: {faCoffee},
       link: ''
     }
   ]
   ];
-  return faIconsList.map((faIcons,index)=> {
+  return faItemsList.map((faItems,index)=> {
     return(
       <Row key={index} className="mb-2">
-        {faIcons.map((icon,index) => {
+        {faItems.map((item,index) => {
           return(
             <Col className="text-center" key={index}>
-              <a href={icon.link} target="_blank" >
-                <FontAwesomeIcon name={icon.name} size="5x" />
+              <a href={item.link} target="_blank" >
+                <FontAwesomeIcon icon={item.name.faCoffee} size="5x" />
               </a>
             </Col>
           );
