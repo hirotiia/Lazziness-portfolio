@@ -5,8 +5,6 @@ import About from './components/about/About';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Header from './components/Header';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 
 
 class App extends React.Component {

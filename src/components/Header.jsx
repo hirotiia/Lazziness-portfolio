@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
     Collapse,
@@ -49,7 +49,7 @@ class Header extends React.Component {
                     <Nav className="ml-auto" navbar>
                         <NavItem>
                         <Link to='/' className="nav-link" onClick={this.onClickLink}>
-                            ホーム
+                            home
                         </Link>
                         </NavItem>
                         <NavItem>

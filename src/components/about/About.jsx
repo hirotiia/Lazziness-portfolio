@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     Container,
@@ -61,15 +60,15 @@ const renderFaIcons = () => {
     [
     {
       name: ['fab', 'facebook-square'],
-      link: ''
+      link: 'https://www.facebook.com/'
     },
     {
       name: ['fab', 'github-square'],
-      link: ''
+      link: 'https://github.com/'
     },
     {
       name: ['fab', 'twitter-square'],
-      link: ''
+      link: 'https://twitter.com/home'
     }
   ]
   ];
@@ -79,7 +78,8 @@ const renderFaIcons = () => {
         {faItems.map((item,index) => {
           return(
             <Col className="text-center" key={index}>
-              <a href={item.link} target="_blank" >
+              {/* rel="noopener noreferrer"はセキュリティー用（ターミナルのwarningで出た) */}
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 {/* <FontAwesomeIcon icon={item.name.faCoffee} size="5x" /> */}
                 <FontAwesomeIcon icon={item.name} size="5x" />
               </a>
