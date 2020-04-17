@@ -29,6 +29,8 @@ class Portfolio extends React.Component {
                 <Container>
                     <Row>
                         <Col className="text-center">
+                            <h1>My Portfolio</h1>
+                            <hr />
                             <RailsPortfolioPage />
                             <button onClick={() => this.changeJavascriptPortfolioPage()} className="btn-primary mt-5">JavascriptPortfolioPage</button>
                         </Col>
@@ -40,6 +42,8 @@ class Portfolio extends React.Component {
             <Container>
                 <Row>
                     <Col className="text-center">
+                        <h1>My Portfolio</h1>
+                        <hr />
                         <JavascriptPortfolioPage />
                         <button onClick={() => this.changeRailsPortfolioPage()} className="btn-primary mt-5">RailsPortfolioPage</button>
                     </Col>
@@ -51,8 +55,8 @@ class Portfolio extends React.Component {
 }
 const RailsPortfolioPage = () => {
     return(
-        <Card>
-            <Card.Img variant="top" src={rubyImage} width="50%"/>
+        <Card border="danger" style={{ width: '18rem',margin: '0 auto'}}>
+            <Card.Img variant="top" src={rubyImage}/>
             <Card.Body>
                 <Card.Title>RailsPortfolioPage</Card.Title>
                 <Card.Text>ruby on rails でメモアプリ作成してみました。</Card.Text>
@@ -63,8 +67,8 @@ const RailsPortfolioPage = () => {
 };
 const JavascriptPortfolioPage = () => {
     return(
-        <Card>
-            <Card.Img variant="top" src={jsImage} width="100%"/>
+        <Card border="warning" style={{ width: '18rem' ,margin: '0 auto'}}>
+            <Card.Img variant="top" src={jsImage}/>
             <Card.Body>
                 <Card.Title>JavascriptPortfolioPage</Card.Title>
                 <Card.Text>javascript でQuizアプリを作成してみました。</Card.Text>

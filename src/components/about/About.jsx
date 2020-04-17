@@ -45,9 +45,6 @@ class About extends React.Component {
                 </Row>
                 <Row className="mb-5">
                     <Col className="text-center">
-                    {/* <FontAwesomeIcon icon={faCoffee} /> */}
-                    {/* <FontAwesomeIcon icon={faGithub} /> */}
-                    <FontAwesomeIcon icon="check-square" />
                     { renderFaIcons() }
                     </Col>
                 </Row>

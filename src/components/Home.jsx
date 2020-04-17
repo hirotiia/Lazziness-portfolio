@@ -14,7 +14,7 @@ const sectionItems = [
         ],
         links:[{
             url: '/about',
-            text: 'プロフィール',
+            text: 'PROFILE',
         }]
     },
     {
